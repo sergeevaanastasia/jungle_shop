@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Ysabeau Office", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+}
+
+a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen-home {
+  background: url("../images/background_home.avif") no-repeat center;
+  background-size: cover;
+}
+
+header {
+  position: sticky;
+  top: 30px;
+  // left: 0;
+  // right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 90%;
+  padding: 24px;
+  background: #060825b3;
+  border-radius: 10px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+@mixin card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  margin: auto;
+  padding: 50px 30px;
+  background: rgba(250, 250, 250, 0.85);
+  border-radius: 30px;
+}
+
+.welcome-card {
+  @include card;
+
+  box-shadow: 0 0 30px 0 #ffffff80;
+}
+
+.welcome__subheading {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+.welcome__text,
+.landscaping__text {
+  text-align: center;
+  font-size: 24px;
+}
+
+.welcome__btn,
+.contact-us__btn {
+  margin-top: 30px;
+  padding: 26px 30px;
+  border-radius: 82px;
+  background: #060825;
+  box-shadow: 0 15px 35px 0 #06082533;
+  color: #fafafa;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.screen-popular-plants {
+  background: url("../images/background_decor.png") no-repeat center;
+  background-size: cover;
+}
+
+.screen-popular-decor {
+  background: url("../images/background_popular2.png") no-repeat top;
+  background-size: 100vw;
+}
+
+.screen-landscaping {
+  background: url("../images/background_landscaping.png") no-repeat top left;
+  background-size: 25vh;
+}
+
+.screen-contact-us {
+  background: url("../images/background_contactus.png") no-repeat center;
+  background-size: contain;
+}
+
+.popular-plants,
+.popular-decor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  width: 80vw;
+}
+
+.screen__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 0;
+  width: 700px;
+  font-size: 45px;
+  font-weight: 700;
+  background-color: #060825b3;
+  color: #fafafa;
+  border-radius: 100px;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 22vw;
+  padding: 30px;
+  box-shadow: 0 0 30px 0 #06082533;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+.product__image {
+  margin-top: 20px;
+  width: 70%;
+}
+
+// .product__description {
+//   text-align: center;
+//   margin-top: 20px;
+// }
+
+.product__select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.product-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  b {
+    margin: 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+@mixin select-item {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px solid #060825;
+  border-radius: 24px;
+}
+
+.select__btn {
+  @include select-item;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.add-to-cart {
+  margin-top: 20px;
+  padding: 8px 18px;
+  background: #060825;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fafafa;
+}
+
+.link {
+  position: absolute;
+  bottom: 5vh;
+  right: -25px;
+  padding: 20px 70px 20px 50px;
+  background: #060825;
+  border-radius: 100px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fafafa;
+}
+
+.landscaping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.landscaping__text {
+  margin-top: 50px;
+  width: 50vw;
+  font-weight: 500;
+}
+
+.landscaping__gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100vw;
+}
+
+.gallery__slide {
+  margin-right: 30px;
+  height: 30vh;
+
+  &.active-slide {
+    align-self: center;
+    height: 45vh;
+  }
+
+  img {
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 #06082533;
+  }
+}
+
+.gallery__slide:last-child {
+  margin-right: 0;
+}
+
+.gallery__btns {
+  margin-top: 50px;
+}
+
+.gallery__btn {
+  @include select-item;
+
+  margin-right: 20px;
+
+  &.active-btn {
+    background-color: #060825;
+  }
+}
+
+.contact-us-card {
+  @include card;
+
+  box-shadow: 0 0 30px 0 #06082533;
+}
+
+@mixin input-area {
+  margin-bottom: 24px;
+  padding: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  color: #060825;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #060825;
+  border-radius: 5px;
+}
+
+.contact-us__input {
+  @include input-area;
+
+  height: 60px;
+}
+
+.contact-us__area {
+  @include input-area;
+
+  height: 120px;
+}
